@@ -124,11 +124,11 @@ const vowels = ['a','e','i','o','u'];
 let names =['f','i','f','s','u','d','a','o'];
 function vowelCount() {
     let vowelNos = 0;
-for (letter of names) {
+    names.map((letter) => {
 if (vowels.includes(letter)){
     vowelNos++;
     }
-}
+});
     return vowelNos;
 }
 console.log(vowelCount()); 
@@ -171,12 +171,17 @@ console.log(astericks);
 // 9. Check for divisibility
 // Write a program that takes an array of numbers and prints all the numbers that are divisible by 3, but not by 2.
 // Use a for loop and continue statement.
-let arr = [9,27,4,6,12,8,10]
+const arr = [9,27,4,6,12,8,10]
+const nums = () =>{
+ let k =[];
 for (i=0; i<arr.length; i++) {
     if ((arr[i] % 3 == 0) && (arr[i] % 2 != 0) ) {
-       console.log(arr[i]);
+        k.push(arr[i]);  
     }
 }
+return k;
+}
+console.log(nums(arr));
 // 10. Correct a bug
 
 // You are working on an e-commerce website where customers can add items to their cart. The cart stores the
