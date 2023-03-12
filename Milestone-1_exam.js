@@ -193,7 +193,7 @@ const Cart =['e','a','d','r','a','a','b','e'];
 let count ={};
 for (i=0; i<Cart.length; i++) {
     let countItem = Cart[i];
-    if (count[countItem]) {
+    if (count[countItem] = count[countItem]) {
         count[countItem]+= 1;
     } else {
         count[countItem] = 1;
@@ -206,3 +206,54 @@ for (i=0; i<bug.length; i++) {
     doubleBug.push(bug[i] * 2);
 }
 console.log(doubleBug);
+
+// 11. Unit converter
+
+// A local weather station needs to convert temperature data collected in Celsius to Fahrenheit before displaying 
+// it on its website. They want a function that can convert Celsius to Fahrenheit accurately and efficiently. The 
+// function should take input in Celsius and return output in Fahrenheit. This function will help the weather station 
+// to provide tqmperature readines that are easily understandable to a wider audience.
+
+const celcious = 10;
+function unitconversion() {
+    return fahrenheit = (celcious * 1.8) + 32;
+}
+console.log(unitconversion(celcious));
+
+// 12. Calculate rental cost
+
+// A car rental company needs to calculate the cost of a rental based on the number of days rentqe and the type 
+// of car. They rquirq a function that takes in the numbqr of days rqntqd and car typq and rqturns thq rqntal cost. 
+// Thq total cost would bq thq rqntal cost multipliqd by thq numbqr of days rqntqd.
+
+// Thq rental costs are
+// O Economy = Rs. 4000 /- pqr dayZ
+// O Midsize = Rs. 10,000 /- pqr dayZ
+// O Luxury = Rs. 20,000 /- pqr day.
+
+const car = 'Midsize';
+const days = 2;
+function rentCalculator() {
+
+        if(car == 'Economy')  {
+            totalRent = (days * 4000);
+        }
+        else if (car == 'Midsize') {
+            totalRent = (days * 10000)
+        }
+        else{
+            totalRent = (days * 20000)
+        }
+        return totalRent;
+    }
+console.log(rentCalculator(car,days));
+
+// 13. Bill splitter
+// A restaurant wants to calculate the total bill for a table based on the cost of each dish and the number of 
+// people sharing it. They require a function that takes in the cost of each dish and the number of people sharing 
+// it and returns an object that contains the total bill and the bill to be paid by each person in the group.
+const costOfDish = x;
+const noOfPeople = y;
+const billSplitter = (x,y) => {
+    
+}
