@@ -20,7 +20,7 @@ else {
 // | Take in two numbers, num1 and num2, and a string representing a mathematical operator, operator
 // | Use a switch statement to determine which operation to perform based on the value of the operator
 // | If the operator is one of the four valid operators (+, -, *, /), perform the corresponding mathematical 
-// operation and store the result in a variable called result
+// operation and store the result in a constiable called result
 // | If the operator is not one of the valid operators, log "Invalid operator" to the console.
 const num1 = 10;
 const num2 = 4;
@@ -252,8 +252,75 @@ console.log(rentCalculator(car,days));
 // A restaurant wants to calculate the total bill for a table based on the cost of each dish and the number of 
 // people sharing it. They require a function that takes in the cost of each dish and the number of people sharing 
 // it and returns an object that contains the total bill and the bill to be paid by each person in the group.
-const costOfDish = x;
-const noOfPeople = y;
-const billSplitter = (x,y) => {
-    
+
+function billSplitter (x,y) {
+  return totalCost ={
+    cost: x,
+    $person: x/y
+  }
 }
+console.log(billSplitter (100,5)); 
+
+// 14. Calculate the final order price
+// A retail store needs to calculate the total cost of items in a customer's cart. A customer cart is an array of
+// objects with unit price and quantity. Implement an arrow function to calculate the total cost of items, based on
+// the unit price and quantity of each item.
+const customerCart = [
+    {unitprice:20,quantity:2},
+    {unitprice:30,quantity:3},
+    {unitprice:20,quantity:5},
+     ]
+
+    //  15. Calculate the percentage of the discount
+    //  A retail store is offering a discount on its products and wants to calculate the percentage of the discount to 
+    //  show customers how much they can save. Given the original price and the discounted price of a product, 
+    //  implement an arrow function to calculate the percentage of the discount rounded off to two decimal places. 
+    //  This function could be useful for the store's marketing team to create promotions and offers that attract 
+    //  customers.
+    const originalPrice = 'x';
+    const discountPrice = 'y';
+    const discountedsaving = z='x'-'y'
+    const percentageOFDiscount = (x,y) => {
+        let z =x-y;
+      let p = (z/x) * 100 ;
+      return p.toFixed(2);
+    }
+
+console.log(percentageOFDiscount(150,95)+'%');
+
+// 16. Generate a random number
+// Create a JavaScript program that generates a random number between 1 and 100 when the program starts. 
+// Use a self-invoking arrow function to generate the random number. This program can be used as a component 
+// in constious games or applications that require a random number generator
+
+const getRandomInt = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)+min);
+  }
+  console.log(getRandomInt(1,100));
+
+//   17. Build a banking application
+// A banking application needs to manage customer accounts and transactions. The user detail is stored in an 
+// object with a keys name and balance. Write functions using object methods to update a customer's account 
+// balance based on a deposit or withdrawal.
+
+const account ={name:'santosh', balance:5000}
+    const deposit= function (balance,x) {
+        account.balance = balance + x;
+        return (account.balance);
+    }
+    const withdraw= function (balance,y) {
+        account.balance = balance - y;
+        return (account.balance);
+    }
+    const depositBal = deposit(account.balance,100);
+    const withdrawBal = withdraw(account.balance,100)
+
+    account.balance = depositBal;
+    account.balance = withdrawBal;
+    console.log(account);
+    
+
+
+
