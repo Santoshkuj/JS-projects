@@ -7,11 +7,21 @@
     <title>Hilight Text</title>
 </head>
 <body>
-    <p>bfghd</p>
+    <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatum culpa repellat! Ut fugiat in exercitationem similique sit voluptate cumque.</p>
 
   <script>
-    let words = document.getElementsByTagName("p");
-    console.log(words);
+
+  const check = (word) => {
+    if (word.length > 8) {
+      word = '<span style ="backgroundcolor:yellow;">' + word + '</span>';
+    } else {
+       word
+    }
+    return word;
+  }
+   const words = document.getElementById("paragraph");
+   words.innerHtml = words.innerText.trim().split().map(check).join();
+
   </script>
 
 </body>
