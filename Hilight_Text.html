@@ -11,16 +11,15 @@
 
   <script>
 
-  const check = (word) => {
-    if (word.length > 8) {
-      word = '<span style ="backgroundcolor:yellow;">' + word + '</span>';
-    } else {
-       word
-    }
-    return word;
-  }
    const words = document.getElementById("paragraph");
-   words.innerHtml = words.innerText.trim().split().map(check).join();
+   words.innerHtml = words.innerText.trim().split().map((check) =>{
+    if (check.length > 8) {
+      check = '<span style ="backgroundcolor:yellow;">' + check + '</span>';
+    } else {
+       check
+    }
+    return check;
+   }).join();
 
   </script>
 
