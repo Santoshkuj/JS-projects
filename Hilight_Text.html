@@ -10,16 +10,17 @@
     <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatum culpa repellat! Ut fugiat in exercitationem similique sit voluptate cumque.</p>
 
   <script>
-
-   const words = document.getElementById("paragraph");
-   words.innerHtml = words.innerText.trim().split().map((check) =>{
-    if (check.length > 8) {
-      check = '<span style ="backgroundcolor:yellow;">' + check + '</span>';
+ check = words =>{
+    if (words.length > 8) {
+      words = '<span style ="backgroundcolor:yellow;">' + words + '</span>';
     } else {
-       check
+      return words;
     }
-    return check;
-   }).join();
+   
+  }
+   const words = document.getElementById("paragraph");
+   words.innerHtml = words.innerText.trim().split('').map((check)
+   ).join('');
 
   </script>
 
