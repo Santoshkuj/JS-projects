@@ -321,8 +321,3 @@ const account ={name:'santosh', balance:5000}
     account.balance = depositBal;
     account.balance = withdrawBal;
     console.log(account);
-    
-
-const q = [3,4];
-console.log(q);
-
