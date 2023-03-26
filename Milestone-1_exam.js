@@ -323,5 +323,6 @@ const account ={name:'santosh', balance:5000}
     console.log(account);
     
 
-
+const q = [3,4];
+console.log(q);
 
