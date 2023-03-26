@@ -270,6 +270,7 @@ const customerCart = [
     {unitprice:30,quantity:3},
     {unitprice:20,quantity:5},
      ]
+     
 
     //  15. Calculate the percentage of the discount
     //  A retail store is offering a discount on its products and wants to calculate the percentage of the discount to 
@@ -282,7 +283,7 @@ const customerCart = [
     const discountedsaving = z='x'-'y'
     const percentageOFDiscount = (x,y) => {
         let z =x-y;
-      let p = (z/x) * 100 ;
+      let p = (z/x) * 100;
       return p.toFixed(2);
     }
 
