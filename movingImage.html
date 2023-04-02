@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Image</title>
+</head>
+<body>
+    <img style="height: 200px; width: 200px;" src="https://images.pexels.com/photos/14284333/pexels-photo-14284333.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="image">
+    
+    <script>
+        // Select the image you want to move
+const image = document.querySelector('img');
+// Set the initial position of the image
+let x = 0;
+let y = 0;
+// Define a function to move the image
+function moveImage(direction) {
+  switch (direction) {
+    case 'ArrowUp':
+      y -= 10;
+      break;
+    case 'ArrowDown':
+      y += 10;
+      break;
+    case 'ArrowLeft':
+      x -= 10;
+      break;
+    case 'ArrowRight':
+      x += 10;
+      break;
+  }
+  image.style.transform = `translate(${x}px, ${y}px)`;
+}
+// Listen for arrow key presses
+document.addEventListener('keydown', function(event) {
+  if (event.code.startsWith('Arrow')) {
+    event.preventDefault(); // prevent default scrolling behavior
+    moveImage(event.code);
+  }
+});
+    </script>
+</body>
+</html>
