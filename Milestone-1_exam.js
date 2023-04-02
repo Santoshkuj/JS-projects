@@ -315,7 +315,7 @@ const account ={name:'santosh', balance:5000}
         account.balance = balance - y;
         return (account.balance);
     }
-    const depositBal = deposit(account.balance,100);
+    const depositBal = deposit(account.balance,2000);
     const withdrawBal = withdraw(account.balance,100)
 
     account.balance = depositBal;

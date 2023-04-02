@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TODO APP</title>
+</head>
+
+<body>
+<h1>TODO APP</h1>
+<label for="todoItems">Add Todo: </label>
+<input
+type="text"
+name="todoItems"
+id="todoItem"
+placeholder="Enter New TODO Item"
+/>
+<button id="addItem">Add Item</button>
+<h3>Your TODO List</h3>
+<ul id="todoList"></ul>
+</body>
+<!-- JS Starts -->
+<script>
+const todoItem = document.getElementById("todoItem");
+const addItem = document.getElementById("addItem");
+const todoList = document.getElementById("todoList");
+function addItemToList() {
+if (todoItem.value != "") {
+const newItem = document.createElement("li");
+newItem.textContent = todoItem.value;
+todoList.appendChild(newItem);
+todoItem.value = "";
+}
+}
+addItem.addEventListener("click", addItemToList);
+</script>
+<!-- JS Ends -->
+</html>

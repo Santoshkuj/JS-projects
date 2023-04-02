@@ -7,21 +7,18 @@
     <title>Hilight Text</title>
 </head>
 <body>
-    <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatum culpa repellat! Ut fugiat in exercitationem similique sit voluptate cumque.</p>
-
+  <p id="my-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nulla luctus, facilisis nulla sit amet, aliquam ante. Praesent eget augue ut metus laoreet vestibulum sed sit amet velit. Nam sollicitudin ullamcorper urna at varius. Aenean ultrices orci sit amet velit commodo ultrices. Vivamus nec mi non augue elementum posuere.</p>
   <script>
- check = words =>{
-    if (words.length > 8) {
-      words = '<span style ="backgroundcolor:yellow;">' + words + '</span>';
-    } else {
-      return words;
-    }
-   
-  }
-   const words = document.getElementById("paragraph");
-   words.innerHtml = words.innerText.trim().split('').map((check)
-   ).join('');
+    const paragraph = document.getElementById("my-paragraph");
+const words = paragraph.innerHTML.split(" ");
 
+for (let i = 0; i < words.length; i++) {
+  if (words[i].length > 8) {
+    words[i] = `<span style="background-color: yellow">${words[i]}</span>`;
+  }
+}
+
+paragraph.innerHTML = words.join(" ");
   </script>
 
 </body>
