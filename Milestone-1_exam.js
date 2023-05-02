@@ -268,8 +268,18 @@ console.log(billSplitter (100,5));
 const customerCart = [
     {unitprice:20,quantity:2},
     {unitprice:30,quantity:3},
-    {unitprice:20,quantity:5},
+    {unitprice:20,quantity:5}
      ]
+     function finalOrder(finalCart) {
+        let k = [];
+        finalCart.forEach(
+          (el) =>
+            k.push(el.unitprice * el.quantity)
+      )
+      return k;
+    }
+      
+      console.log(finalOrder(customerCart));
      
 
     //  15. Calculate the percentage of the discount
